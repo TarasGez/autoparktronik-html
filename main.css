@@ -1,0 +1,537 @@
+@import './palette.css';
+
+body {
+    background: white;
+    color: var(--black);
+    font-family: "HelveticaNeueCyr", Helvetica;
+    font-size: 14px;
+    margin: 0;
+}
+button, input {
+    font-family: "HelveticaNeueCyr", Helvetica;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+}
+
+.flex{
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+.space-around{
+    justify-content: space-around;
+}
+.center{
+    justify-content: center;
+}
+.stretch2{
+    justify-content: stretch;
+}
+.flex-end{
+    align-items: flex-end;
+}
+.stretch{
+    align-items: stretch;
+}
+.middle{
+    align-items: center;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.flex-grow1 {
+    flex-grow:1;
+}
+
+header {
+    background-color: var(--yellowBack);
+    padding: 10px 0;
+    vertical-align: middle;
+}
+header button {
+    background-color: var(--black);
+    color: white;
+    box-shadow: none;
+    border: 0;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 1.2em;
+    padding: 0.7em 1.5em;
+}
+header button:hover {
+    border: 0;
+    background-color: var(--grey);
+}
+header div {
+    margin-bottom: auto;
+}
+header span {
+    margin: 0 7px 7px 0;
+    font-size: 1.2em;
+}
+img.logo{
+    max-width: 200px;
+}
+.bar{
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.banner {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    min-height: 500px;
+    background: url('./images/garage.jpg') no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    color: white;
+    font-size: 1.3rem;
+    line-height: 1.1em;
+    letter-spacing: 0.1em;
+}
+.banner h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1.7em;
+}
+.banner h2 span{
+    color: var(--yellow)
+}
+.banner strong{
+    color: var(--yellow);
+}
+.banner .banner-img {
+    margin:auto;
+}
+.sticker {
+    width: 7em;
+    height: 7em;
+    margin-left: 200px;
+
+    color: var(--yellow);
+    background: url(./images/sticker-bg.svg) no-repeat;
+    background-size: contain;
+    background-position-x: left;
+    background-position-y: bottom;
+}
+.sticker .price{
+    position: absolute;
+    margin-top:40px;
+    margin-left:35px;
+    transform: rotate(15deg);
+    line-height: 1.5em;
+    font-weight: bold;
+}
+.sticker .price span{
+    color: white;
+}
+.sticker span:before {
+    border-bottom: 2px solid red;
+    position: absolute;
+    top: 25%;
+    content: "";
+    width: 70%;
+    transform: rotate(15deg);
+}
+.timer {
+    margin: 2rem 0;
+    color: white;
+}
+.timer span{
+    display: inline-block;
+    background-color: var(--black);
+    margin: 3px;
+    padding: 0.7em  0.4em;
+    border-radius: 7px;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.timer span.dot{
+    background: url("./images/dots.png") no-repeat;
+    background-position: center;
+}
+.banner p {
+    margin: 0 0 0.5em 0;
+}
+
+/* BUTTON ////////////////////*/
+button {
+    color: var(--black);
+    background-color: var(--yellowBack);
+    
+    border: 0;
+    border-bottom: 0.2em solid var(--yellowBorder);
+    border-radius: 7px;
+    padding: 1em 3em;
+    
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    cursor: pointer;
+}
+button:hover {
+    color: white;
+    background-color:var(--yellowBorder);
+    border-top: 0.1em solid var(--yellow);
+    border-bottom: 0.1em solid var(--yellowBorder);
+}
+
+
+/* MAIN //////////////////*/
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+main div {
+    flex-grow: 1;
+}
+main h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    line-height: 1.7em;
+}
+main h2 span{
+    color: var(--yellow);
+}
+main i, main ul li {
+    color: var(--grey);
+    font-style: italic;
+
+}
+main ul{
+    padding: 0 1.1em;;    
+}
+main ul li{
+    list-style: square;
+    line-height: 1.2em;
+    margin: 2em 0;
+}
+main hr {
+    border: 0;
+    border-top: 1px solid var(--yellow);
+}
+
+.feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-grow: 1;
+}
+.feature:before {
+    content : "";
+    position: absolute;
+    left: auto;
+    top: auto;
+    height: 1px;
+    width: 70px;
+    border-bottom:1px solid var(--yellow);
+}
+.feature.first:before {
+    border: none;
+}
+.desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 3em;
+}
+.desc .col{
+    min-width: 50%;
+    flex-grow: 1;
+}
+.image{
+    margin: auto 0;
+}
+.order {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+.reasons{
+    margin: 3em;
+    color: var(--grey);
+    text-align: center;
+}
+.reasons .icon{
+    height: 60px;
+    margin-bottom:  0;
+    padding:0px;
+    position:relative;
+}
+.reasons .icon img{
+    position: absolute;;
+    bottom:0px;
+    margin-left: -20px;
+}
+.reasons h3{
+    color: var(--yellow);
+}
+.reasons div{
+    margin: 1em;
+    flex-basis: 200px;
+}
+
+.video {
+    text-align: center;
+    padding: 3em;
+}
+.video iframe{
+    border: 5px solid var(--yellow);
+    border-top-right-radius: 100% 2rem;
+    border-bottom-left-radius: 100% 2rem;
+}
+
+.econom {
+    text-align: center;
+    margin-top: 3em;
+}
+.econom h3, .econom h4{
+    text-transform: uppercase;
+    margin: 0.7em;
+    letter-spacing: 0.05em;
+}
+.econom h4{
+    font-size: 1.5em;
+}
+.econom h3{
+    font-weight: 1000;
+    font-size: 1.7em;
+}
+.econom h3 span{
+    color: var(--yellow);
+}
+
+.reviews div{
+    margin: 1.5em;
+}
+.reviews img {
+    border: 4px solid var(--yellow);
+}
+.reviews ul li{
+    list-style: none;
+    margin: 0 5px;
+}
+.reviews ul li span.dot {
+    height: 10px;
+    width: 10px;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    background-color: var(--yellow);
+    display: inline-block;
+}
+.reviews ul li span.dot.active {
+    border-color: var(--yellow);
+}
+.reviews .pic {
+    width: 50px;
+    border: 0;
+    border-radius: 50%;
+}
+.reviews span.man{
+    margin-left: 1em;
+}
+.reviews span.man em{
+    color: var(--grey);
+}
+.reviews .arrow {
+    padding-bottom: 2em;
+}
+.reviews .arrow img{
+    border: none;
+}
+.reviews .arrow.back img{
+    transform: rotate(180deg);
+}
+.reviews .slider,
+.reviews .arrows-mob,
+.reviews .arrows-mob div {
+    margin: 0;
+}
+.reviews .slider div {
+    flex-grow: 0;
+}
+.reviews .dots {
+    padding: 0;
+    margin: 0;
+}
+
+.delivery h3{
+    text-transform: uppercase;
+}
+.delivery ul{
+    margin-bottom: 3em;
+}
+.delivery ul li{
+    list-style: disc;
+    color: var(--black);
+    font-style: normal;
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+.delivery .icons {
+    margin-top: 4em;
+    text-align: center;
+}
+.delivery .icons h4{
+    color: var(--yellow);
+    font-size: 1.3em;
+}
+.order-now{
+    margin-bottom:10em;
+}
+.order-now-bg {
+    margin-top: 20px;
+    height: 480px;
+    background: url('./images/econom-park.jpg') no-repeat;
+    background-size: contain;
+}
+.order-now-img {
+    font-size: 1.3rem;
+    margin-left: 150px;
+    margin-top:-150px;
+    z-index: 1000;
+}
+form {
+    margin-top: 3em;
+}
+input[type="text"],
+input[type="tel"] {
+    border: 1px solid var(--black);
+    font-size: 1em;
+    border-radius: 5px;
+    margin: 0.5em;
+    padding: 1em;
+    width: 300px;
+}
+.order-form {
+    text-align: center;
+    margin-top: 4em;
+}
+.width300{
+    width: 350px;
+}
+.margin-auto {
+    margin: auto;
+}
+
+
+
+
+
+footer {
+    min-height: 8rem;
+    background-color: var(--black);
+}
+
+.mob {
+    display: none;
+}
+
+/* MOBILE */
+@media (max-width: 960px) {
+    main h2 {
+       font-size: 1.5em;
+    }
+    .container{
+        min-width:300px;
+        padding: 2rem;
+    }
+    .unmob{
+        display:none;
+    }
+    .mob-center{
+        text-align: center;
+    }
+    .flex {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .timer.flex {
+        flex-direction: row;
+    }
+    .feature, .desc {
+        flex-direction: column;
+    }
+    .image {
+        margin:auto;
+    }
+    .reasons, .reasons div {
+        margin: 0;
+    }
+    .mob-margin-top-2em {
+        margin-top: 2em;
+    }
+    .delivery h3{
+        text-align: center;
+    }
+    .order-now-bg
+    {
+        background-position-x: center;
+    }
+    .reviews {
+        margin-bottom: 20px;   
+    }
+    .reviews div {
+        margin: 0;
+    }
+    .reviews ul.dots{
+        flex-direction: row;
+    }
+    .reviews .slider {
+        align-items: center;
+        text-align: center;
+    }
+    .reviews .slider div {
+        margin: 10px;
+        flex-grow: 1;
+    }
+    .arrows-mob {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        width: 400px;
+    }
+    .arrows-mob div{
+        flex-grow: 1;
+    }
+    .arrows-mob .arrow {
+        padding: 0;
+    }
+    .arrow.mob img{
+        height: 20px;
+    }
+    .reviews .avatar {
+        display: flex;
+        flex-direction: row;
+    }
+    .mob {
+        display: block;
+    }
+    .reviews .dots {
+        margin-top: 13px;
+    }
+    .reviews .comment {
+        align-items: center;
+    }
+    .row{
+        flex-direction: row;
+    }
+    
+}
