@@ -453,9 +453,13 @@ footer {
     main h2 {
        font-size: 1.5em;
     }
-    main, p, ul {
+    main, p, ul{
         font-size: 1.3rem;
         line-height: 2rem;
+    }
+    input[type="text"], input[type="tel"] {
+        font-size: 1.3em;
+        width: 80%;
     }
     .container{
         min-width:300px;
