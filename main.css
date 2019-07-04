@@ -7,6 +7,10 @@ body {
     font-size: 14px;
     margin: 0;
 }
+p {
+    font-size: 1em;
+    line-height: 1.3em;
+}
 button, input {
     font-family: "HelveticaNeueCyr", Helvetica;
 }
@@ -14,7 +18,7 @@ button, input {
 .container {
     max-width: 1500px;
     margin: auto;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
 }
 
@@ -449,6 +453,10 @@ footer {
     main h2 {
        font-size: 1.5em;
     }
+    main, p, ul {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
     .container{
         min-width:300px;
         padding: 2rem;
@@ -463,11 +471,26 @@ footer {
         flex-direction: column;
         justify-content: center;
     }
+    .banner{
+        font-size: 2em;
+    }
+    .banner h2 {
+        font-size: 2em;
+        line-height: 1.7em;
+    }
+    .banner p{
+        font-size: 1.3em;
+        line-height: 1.1em;
+    }
     .banner .flex {
         align-items: center;
     }
     .timer.flex {
         flex-direction: row;
+    }
+    .sticker .price {
+        margin-top: 55px;
+        margin-left: 45px;
     }
     .feature, .desc {
         flex-direction: column;
